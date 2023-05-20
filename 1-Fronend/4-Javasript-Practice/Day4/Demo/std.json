@@ -1,0 +1,22 @@
+[
+    {
+        "name":"ahmed",
+        "age":10,
+        "addr":"abc"
+    },
+    {
+        "name":"mohamed",
+        "age":10,
+        "addr":"abc"
+    },
+    {
+        "name":"mona",
+        "age":10,
+        "addr":"abc"
+    },
+    {
+        "name":"fatma",
+        "age":10,
+        "addr":"abc"
+    }
+]

@@ -1,0 +1,441 @@
+/* 
+Ibrahim Mohamed Radi 
+HTML & CSS Labs 
+ITI 2022/2023 Q1 
+9/9/2022
+*/
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* variable */
+:root {
+    --main-color: #458FF6;
+    --secondary-color: #193051;
+}
+
+/* style */
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    color: var(--secondary-color);
+}
+
+nav.navigasi {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.navigasi ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.navigasi ul li:not(:last-child) {
+    margin-right: 40px;
+}
+
+nav.navigasi ul li a {
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+nav.navigasi ul li a.active {
+    font-weight: bold;
+}
+
+nav.navigasi ul li a:hover {
+    color: var(--main-color);
+}
+
+/* container */
+.container {
+    padding: 0 10%;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.btn-main {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button.btn-main:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.caption {
+    width: 45%;
+    margin-right: 40px;
+}
+
+.caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.caption p {
+    font-size: 21px;
+    margin: 28px 0;
+    line-height: 36px;
+}
+
+.hero {
+    width: 55%;
+}
+
+.hero img {
+    width: 100%;
+}
+
+/* services */
+.caption-services {
+    text-align: center;
+    margin-top: 145px;
+}
+
+.caption-services h3,
+.section-dua .caption h3,
+.section-tiga .caption h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.caption-services hr,
+.section-empat .caption hr {
+    width: 124px;
+    margin: 24px auto;
+    border: solid 2px var(--main-color);
+}
+
+.caption-services p,
+.section-dua .caption p,
+.section-tiga .caption p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.services {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 33%;
+    margin: 25px 0;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 1px 4px 8px rgba(25, 139, 231, .3);
+}
+
+.service h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.service p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.service img {
+    width: 85px;
+    height: 85px;
+}
+
+button.btn-secondary {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: var(--main-color);
+    border: solid 2px var(--main-color);
+    font-size: 18px;
+    margin: auto;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button.btn-secondary:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* section dua & tiga*/
+.section-dua,
+.section-tiga {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 145px auto;
+}
+
+.section-dua .caption hr,
+.section-tiga .caption hr {
+    width: 120px;
+    margin-top: 24px;
+    border: solid 2px var(--main-color);
+}
+
+.section-dua .hero,
+.section-tiga .hero {
+    margin-right: 50px;
+}
+
+.section-dua button,
+.section-tiga button {
+    margin: 0;
+}
+
+.section-tiga .hero {
+    order: 2;
+}
+
+.section-tiga .caption {
+    order: 1;
+}
+
+/* testimonials */
+.testimonials {
+    width: 100%;
+    padding: 60px 80px;
+    background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+    border-radius: 24px;
+}
+
+.testimonials .caption {
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials .caption h3 {
+    font-size: 2.1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.testimonials .caption hr {
+    width: 124px;
+    margin: 24px auto;
+    border: solid 1px white;
+}
+
+.testimonials .customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.customer .photo {
+    margin-right: 40px;
+    padding: 70px;
+    background-image: url(../img/section-tiga.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: solid 4px white;
+}
+
+.customer .identitas {
+    margin-right: 40px;
+}
+
+.customer .identitas h3 {
+    width: 200px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.customer .identitas span {
+    font-size: 18px;
+    color: white;
+    font-weight: lighter;
+}
+
+.customer .deskripsi p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+/* arrows */
+.arrows {
+    width: 50%;
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arrows i {
+    color: var(--main-color);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+
+.arrows .circle {
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    opacity: .4;
+    border-radius: 50%;
+}
+
+.arrows .active {
+    background-color: var(--main-color);
+    opacity: 1;
+}
+
+/* section 4 */
+.section-empat {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-4 .caption {
+    margin: 145px auto auto auto;
+}
+
+.section-4 .caption h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.section-4 .caption hr {
+    width: 124px;
+    margin: 24px auto;
+    border: solid 1px;
+}
+
+.section-empat .article {
+    padding: 10px;
+}
+
+.article .hero {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+
+.article .deskripsi h3 {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 18px 0;
+    line-height: 32px;
+}
+
+.article .deskripsi p {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 18px 0;
+}
+
+.article .deskripsi a {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.article .deskripsi i {
+    position: relative;
+    top: 4px;
+    left: 10px;
+    font-size: 1.5rem;
+}
+
+.section-4 button {
+    margin-top: 35px;
+    padding: 1rem 2.5rem;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    margin: auto;
+    margin-top: 145px;
+    padding: 100px 145px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+}
+
+footer .first-footer {
+    width: 40%;
+}
+
+footer .footers {
+    width: 20%;
+}
+
+footer .footers h3 {
+    font-size: 20px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+
+footer .footers p,
+footer .footers a,
+footer .first-footer p,
+footer .first-footer a {
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    margin: 25px 0;
+    display: block;
+}
+
+footer .first-footer p {
+    line-height: 38px;
+}

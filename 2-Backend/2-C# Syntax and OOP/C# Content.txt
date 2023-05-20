@@ -1,0 +1,20 @@
+*Day 1
+C# SD02 D01 - Google Drive
+
+*From Day 2 To Day 9
+https://drive.google.com/drive/folders/1xZAvMZXImBdJAt14q-eZ53gTKAwKI8mg?usp=sharing
+
+*Day 10 To Day 17(EF Day3)
+C# SD02 - Google Drive
+
+*Day 16 EF02 part 2
+https://drive.google.com/drive/folders/1WPau4f-oxoxvQ-ZP3PmP-vBelSAAgJGQ?usp=sharing
+
+*G01 Lect Recording - Check the BenchmarkDotNet Example
+‪EF part2‬‏ - Google Drive
+
+*Garbage Collection
+https://drive.google.com/drive/folders/16B-m5L8W7a_JZbG1tlScrl1omqtCg4j2?usp=sharing
+
+*Threading
+https://drive.google.com/drive/folders/1kEX8Jensg7rsHOXQV3Voq2GOQf4XOKwE?usp=sharing

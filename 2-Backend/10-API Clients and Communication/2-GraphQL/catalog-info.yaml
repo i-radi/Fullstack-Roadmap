@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: .NET GraphQL API
+  annotations:
+    github.com/project-slug: i-radi/.NET-GraphQL-API
+spec:
+  type: other
+  lifecycle: unknown
+  owner: ibrahimradi

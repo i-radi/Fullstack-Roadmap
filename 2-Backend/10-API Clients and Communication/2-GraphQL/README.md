@@ -1,0 +1,2 @@
+# .NET-GraphQL-API
+.NET GraphQL API POC

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingControllersSample.Tests", "tests\TestingControllersSample.Tests\TestingControllersSample.Tests.csproj", "{2BBE6BFC-9170-49D2-84DB-F619B6FA84CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingControllersSample", "src\TestingControllersSample\TestingControllersSample.csproj", "{66860F18-47C4-4EFD-9B4B-E491101B13C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BBE6BFC-9170-49D2-84DB-F619B6FA84CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBE6BFC-9170-49D2-84DB-F619B6FA84CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBE6BFC-9170-49D2-84DB-F619B6FA84CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBE6BFC-9170-49D2-84DB-F619B6FA84CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66860F18-47C4-4EFD-9B4B-E491101B13C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66860F18-47C4-4EFD-9B4B-E491101B13C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66860F18-47C4-4EFD-9B4B-E491101B13C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66860F18-47C4-4EFD-9B4B-E491101B13C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
