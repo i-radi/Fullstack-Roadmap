@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <script defer src="../js/script.js"></script>
+        <title>Template</title>
+    </head>
+
+    <body>
+        <h1>Task 1: Adding, Multiplication, and Division 3 values</h1>
+        <input type="button" class="btn-main" onclick="aggResult()" value="Enter 3 Numbers" />
+        <input type="button" class="btn-main" onclick="clrContent()" value="Clear Result" />
+        <h3 id="sum"></h3>
+        <h3 id="mul"></h3>
+        <h3 id="div"></h3>
+        <hr>
+        <h1>Task 2: Sorting</h1>
+        <input type="button" class="btn-main" onclick="sortNumbers()" value="Enter 5 Numbers" />
+        <input type="button" class="btn-main" onclick="clrContent2()" value="Clear Result" />
+        <h3 id="sort"></h3>
+        <h3 id="sortAsc"></h3>
+        <h3 id="sortDesc"></h3>
+        <hr>
+        <h1>Task 3: Math</h1>
+        <input type="button" class="btn-main" onclick="calcArea()" value="Enter radius" />
+        <input type="button" class="btn-main" onclick="calcSqrt()" value="Enter Number" />
+        <input type="button" class="btn-main" onclick="calcCos()" value="Enter Number" />
+        <input type="button" class="btn-main" onclick="clrContent3()" value="Clear Result" />
+        <h3 id="cos"></h3>
+        <hr>
+        <h1>Task 4</h1>
+        <input type="button" class="btn-main" onclick="createWindow()" value="Create window" />
+        <input type="button" class="btn-main" onclick="stopMovement()" value="Stop window movement" />
+        <hr>
+        <h1>Task 5</h1>
+        <form action="./welcomeUser.html">
+            <input type="text" name="usrName" placeholder="Enter your name">
+            <input type="text" name="usrAdd" placeholder="Enter your address">
+            <input type="text" name="usrGender" placeholder="Enter your gender">
+            <input type="email" name="usrMail" placeholder="Enter your E-mail">
+            <input type="tel" name="usrPhone" placeholder="Enter your Mobile">
+            <input type="submit" class="btn-main">
+        </form>
+        <hr>
+        <h1>Bonus</h1>
+        <input type="button" class="btn-main" onclick="openTypingPage()" value="Typing window" />
+
+
+        <input type="button" class="btn-main" onclick="openScrollingPage()" value="Scrolling Window" />
+
+    </body>
+
+</html>

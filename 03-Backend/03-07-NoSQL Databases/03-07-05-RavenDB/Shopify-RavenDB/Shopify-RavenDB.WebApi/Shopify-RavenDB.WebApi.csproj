@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Shopify_RavenDB.WebApi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="RavenDB.Client" Version="5.3.100" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shopify-RavenDB.Core\Shopify-RavenDB.Core.csproj" />
+    <ProjectReference Include="..\Shopify-RavenDB.Platform\Shopify-RavenDB.Platform.csproj" />
+  </ItemGroup>
+
+</Project>

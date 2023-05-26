@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Shopify_RavenDB.Platform</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RavenDB.Client" Version="5.3.100" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shopify-RavenDB.Core\Shopify-RavenDB.Core.csproj" />
+  </ItemGroup>
+
+</Project>
