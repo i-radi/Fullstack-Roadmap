@@ -1,4 +1,0 @@
-onload = function(){
-
-    
-}
