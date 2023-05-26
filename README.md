@@ -22,13 +22,14 @@ HTML, CSS, Template 1-2-3-4, JS - Courses
 - <a href="https://app.pluralsight.com/paths/skill/querying-data-with-t-sql-from-sql-server">Pluralsight Course 1</a>
 - <a href="https://app.pluralsight.com/paths/skill/developing-sql-server-databases">Pluralsight Course 2</a>
 ### C# & OOP
-- <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6SWPbJNpiznp-Ok4A8J_23l">C# Metigator </a>
+- C# <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6SWPbJNpiznp-Ok4A8J_23l">Metigator </a>
+- C# <a href="https://www.youtube.com/playlist?list=PLX1bW_GeBRhCU9l7examhVrARmXHHRrLR">Codographia </a>
 ### Desktop (Forms-WPF)
 - <a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-7.0">Microsoft Docs</a>
 ### ORMs
-- <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6Sj1Y4xJuJoWCuqleeG2yt6">LINQ Metigator</a>
-- <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6QZkbTWJx7wHqEABP8Pg6uv">Data Access & EF-Core Metigator</a>
-- <a href="https://www.youtube.com/playlist?list=PL62tSREI9C-cHV28v-EqWinveTTAos8Pp">EF-Core DevCreed</a>
+- LINQ <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6Sj1Y4xJuJoWCuqleeG2yt6">Metigator</a>
+- Data Access & EF-Core <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6QZkbTWJx7wHqEABP8Pg6uv">Metigator</a>
+- EF-Core <a href="https://www.youtube.com/playlist?list=PL62tSREI9C-cHV28v-EqWinveTTAos8Pp">DevCreed</a>
 ### ASP.NET Core Basics
 - API <a href="https://www.youtube.com/watch?v=fmvcAzHpsk8">Les Jackson</a>
 - API Versioning <a href="https://code-maze.com/aspnetcore-api-versioning/">CodeMaze</a>
@@ -42,19 +43,26 @@ HTML, CSS, Template 1-2-3-4, JS - Courses
 ### NoSQL Databases
 - MongoDB, MariaDB, CouchDB, LiteDB, RavinDB, ELS, Cassandra, InfluxDB <a href="#">Blogs</a>
 ### Caching
-- <a href=""></a>
+- InMemoryCaching <a href="https://medium.com/geekculture/how-do-i-use-inmemorycache-in-net-core-b79202ddaf0c">Medium</a>
+- Redis <a href="https://www.youtube.com/watch?v=6HZVu3kGOrg&pp=ygUVcmVkaXMgY2FjaGluZyBpbiAubmV0">Mohamad Lawand</a>
 ### Log Frameworks
-- <a href=""></a>
+- Logging with .NET <a href="https://www.youtube.com/playlist?list=PLNHY3o0fE8J4TUSoIgLuWHxhMY2DLgsdY">Bishoy Labib</a>
 ### API Clients and Communication
-- <a href=""></a>
+- Design a REST API <a href="https://restfulapi.net/rest-api-design-tutorial-with-example/">Blog </a>
+- REST API <a href="https://www.youtube.com/watch?v=fmvcAzHpsk8">Les Jackson</a>
+- GraghQL <a href="https://www.youtube.com/watch?v=HuN94qNwQmM&t=2532s">Les Jackson</a>
+- gRPC <a href="https://www.youtube.com/watch?v=SRjIp96Qox0&t=15s&pp=ygULZ1JQQyBsYXdhbmQ%3D">Mohamad Lawand</a>
 ### Real Time Communication
-- <a href=""></a>
+- WebSocket, SignalR<a href="https://www.youtube.com/watch?v=ycVgXe6v1VQ">Les Jackson</a>
+- Firebase Cloud Messaging<a href="#">Coming Soon</a>
 ### Task Scheduling
-- <a href=""></a>
+- Hangfire <a href="https://www.youtube.com/@DevCreed/playlists">DevCreed</a>
+- Quartz.Net <a href="https://code-maze.com/schedule-jobs-with-quartz-net/">CodeMaze</a>
 ### Unit Testing
-- <a href=""></a>
+- Unit Testing <a href="https://www.youtube.com/playlist?list=PL4n1Qos4Tb6RrQpmpGWALaE1PVvWR8d3A">Metigator</a>
 ### Good To Know Libraries
-- <a href=""></a>
+- Automaper <a href="https://www.youtube.com/@DevCreed/playlists">DevCreed</a>
+- Benchmarker <a href="https://github.com/dotnet/BenchmarkDotNet">Github</a>
 ### Software Architectures
 - <a href=""></a>
 ### Microservices
@@ -63,8 +71,8 @@ HTML, CSS, Template 1-2-3-4, JS - Courses
 - <a href=""></a>
 
 ## Testing
-- <a href="">Coming Soon</a>
+- <a href="#">Coming Soon</a>
 
 ## DevOps
-- <a href="">Coming Soon</a>
+- <a href="#">Coming Soon</a>
 
