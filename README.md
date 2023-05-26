@@ -9,7 +9,8 @@
 - Clean Code: A Handbook of Agile Software Craftsmanship - Book
 
 ## Fronend
-- Elzero Web School(https://www.linkedin.com/in/ibrahim-radi/) : HTML, CSS, Template 1-2-3-4, JS - Courses
+- <a href="https://github.com/i-radi">Elzero Web School</a> : 
+HTML, CSS, Template 1-2-3-4, JS - Courses
 
 ## Backend
 
