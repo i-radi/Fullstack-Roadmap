@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  schoolproject.api:
+    image: ${DOCKER_REGISTRY-}schoolprojectapi
+    build:
+      context: .
+      dockerfile: SchoolProject.Api/Dockerfile
