@@ -6,6 +6,7 @@ using SchoolProject.Core.MiddleWare;
 using SchoolProject.Infrustructure;
 using SchoolProject.Infrustructure.Data;
 using SchoolProject.Service;
+using Serilog;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,13 +26,15 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("dbcontext"));
 });
 
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 #region Dependency injections
 
 builder.Services.AddInfrastructureDependencies()
                  .AddServiceDependencies()
                  .AddCoreDependencies()
-                 .AddServiceRegisteration();
+                 .AddServiceRegisteration(builder.Configuration);
 #endregion
 
 
@@ -93,6 +96,7 @@ app.UseMiddleware<ErrorHandlerMiddleware>();
 app.UseHttpsRedirection();
 app.UseCors(CORS);
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

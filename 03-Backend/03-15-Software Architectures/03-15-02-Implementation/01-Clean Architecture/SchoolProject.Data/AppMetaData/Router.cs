@@ -33,7 +33,18 @@
             public const string GetByID = Prefix+SignleRoute;
             public const string Edit = Prefix+"/Edit";
             public const string Delete = Prefix+"/{id}";
+            public const string ChangePassword = Prefix+"/Change-Password";
         }
+        public static class Authentication
+        {
+            public const string Prefix = Rule+" Authentication";
+            public const string SignIn = Prefix+"/SignIn";
+            public const string RefreshToken = Prefix+"/Refresh-Token";
+            public const string ValidateToken = Prefix+"/Validate-Token";
+
+        }
+
+
 
     }
 }
