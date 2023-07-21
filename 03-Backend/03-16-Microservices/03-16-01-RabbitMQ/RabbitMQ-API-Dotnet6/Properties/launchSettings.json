@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "RabbitMQ_API_Csharp_Python": {
+    "RabbitMQ_API_Csharp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
