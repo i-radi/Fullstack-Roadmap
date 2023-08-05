@@ -15,7 +15,7 @@ namespace SchoolProject.Infrustructure
     {
         public static IServiceCollection AddServiceRegisteration(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddIdentity<User, IdentityRole<int>>(option =>
+            services.AddIdentity<User, Role>(option =>
             {
                 // Password settings.
                 option.Password.RequireDigit = true;
@@ -34,14 +34,18 @@ namespace SchoolProject.Infrustructure
                 option.User.AllowedUserNameCharacters =
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 option.User.RequireUniqueEmail = true;
-                option.SignIn.RequireConfirmedEmail=false;
+                option.SignIn.RequireConfirmedEmail=true;
 
             }).AddEntityFrameworkStores<ApplicationDBContext>().AddDefaultTokenProviders();
 
             //JWT Authentication
             var jwtSettings = new JwtSettings();
+            var emailSettings = new EmailSettings();
             configuration.GetSection(nameof(jwtSettings)).Bind(jwtSettings);
+            configuration.GetSection(nameof(emailSettings)).Bind(emailSettings);
+
             services.AddSingleton(jwtSettings);
+            services.AddSingleton(emailSettings);
 
             services.AddAuthentication(x =>
             {
@@ -96,7 +100,21 @@ namespace SchoolProject.Infrustructure
            });
             });
 
-
+            services.AddAuthorization(option =>
+            {
+                option.AddPolicy("CreateStudent", policy =>
+                {
+                    policy.RequireClaim("Create Student", "True");
+                });
+                option.AddPolicy("DeleteStudent", policy =>
+                {
+                    policy.RequireClaim("Delete Student", "True");
+                });
+                option.AddPolicy("EditStudent", policy =>
+                {
+                    policy.RequireClaim("Edit Student", "True");
+                });
+            });
 
 
 

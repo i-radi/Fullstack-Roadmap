@@ -1,12 +1,18 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using SchoolProject.Core;
+using SchoolProject.Core.Filters;
 using SchoolProject.Core.MiddleWare;
+using SchoolProject.Data.Entities.Identity;
 using SchoolProject.Infrustructure;
 using SchoolProject.Infrustructure.Data;
+using SchoolProject.Infrustructure.Seeder;
 using SchoolProject.Service;
-using Serilog;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,8 +32,6 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("dbcontext"));
 });
 
-builder.Host.UseSerilog((context, configuration) =>
-    configuration.ReadFrom.Configuration(context.Configuration));
 
 #region Dependency injections
 
@@ -36,7 +40,6 @@ builder.Services.AddInfrastructureDependencies()
                  .AddCoreDependencies()
                  .AddServiceRegisteration(builder.Configuration);
 #endregion
-
 
 #region Localization
 builder.Services.AddControllersWithViews();
@@ -77,7 +80,24 @@ builder.Services.AddCors(options =>
 
 #endregion
 
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+builder.Services.AddTransient<IUrlHelper>(x =>
+{
+    var actionContext = x.GetRequiredService<IActionContextAccessor>().ActionContext;
+    var factory = x.GetRequiredService<IUrlHelperFactory>();
+    return factory.GetUrlHelper(actionContext);
+});
+builder.Services.AddTransient<AuthFilter>();
+
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
+    await RoleSeeder.SeedAsync(roleManager);
+    await UserSeeder.SeedAsync(userManager);
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -95,6 +115,7 @@ app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseCors(CORS);
+app.UseStaticFiles();
 
 app.UseAuthentication();
 app.UseAuthorization();
