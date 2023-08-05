@@ -152,7 +152,17 @@ HTML, CSS, Template 1-2-3-4, JS - Courses
 
 ## Testing
 - darda4a fe el testing <a href="https://www.academia.edu/38953736/%D9%83%D8%AA%D8%A7%D8%A8_%D9%81%D9%89_%D8%AF%D8%B1%D8%AF%D8%B4%D8%A9_%D8%A7%D9%84%D8%AA%D9%8A%D8%B3%D8%AA%D9%8A%D9%86%D8%AC_%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF_%D8%B9%D8%AA%D9%85%D8%A7%D9%86_%D8%A3%D8%AD%D9%85%D8%AF">Etman Ahmed</a>
-- <a href="#">Coming Soon</a>
+- Software Testing Practical Training <a href="https://www.youtube.com/playlist?list=PLbJF4g421wqlszfD1tQ3gGIaqzOPtM1jE">Nezam</a>
+- ISTQB Foundation Level 2018 <a href="https://www.youtube.com/playlist?list=PLbJF4g421wqnHTxbGDgm-vqgl3wfj5mMg">Nezam</a>
+- ISTQB Agile Tester <a href="https://www.youtube.com/playlist?list=PLbJF4g421wqnVAC0IXONnGoT4N6Z9pUrf">Nezam</a>
+- How to use JIRA <a href="https://www.youtube.com/playlist?list=PLbJF4g421wqn7Di5kpxFHh0gXnCJpNoKA">Nezam</a>
+- API Testing <a href="https://www.youtube.com/playlist?list=PLbJF4g421wqkHqwmpnIb54F85YcfSLd2t">Nezam</a>
+- Complete ISTQB Foundation Level Course <a href="https://www.youtube.com/playlist?list=PLJ2FoWouEU2zuf76zVJ0buSJUtjh8Sg9d">QAcart</a>
+- Complete Postman Course <a href="https://www.youtube.com/playlist?list=PLJ2FoWouEU2yPMIBTGsMRvxjEevIlMi3F">QAcart</a>
+- Manual Testing Bootcamp <a href="https://www.youtube.com/playlist?list=PLJ2FoWouEU2zpjd0_ukTWM46D7tAXQ_Ln">QAcart</a>
+- Selenium Java course <a href="https://www.youtube.com/playlist?list=PLJ2FoWouEU2w8wnsblKVolmhujkOWgkjo">QAcart</a>
+- Complete Cypress course <a href="https://www.youtube.com/playlist?list=PLJ2FoWouEU2wk6xLWf1vABC_bpl-njsiZ">QAcart</a>
+- Performance Testing using JMeter <a href="https://www.youtube.com/playlist?list=PLbJF4g421wqmsWE-Ac00j5HRBR9pRqWGF">Nezam</a>
 <div align="right">
   <b><a href="https://github.com/i-radi/Fullstack-Roadmap">↥ Back To Top</a></b>
 </div>
