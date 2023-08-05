@@ -168,7 +168,22 @@ HTML, CSS, Template 1-2-3-4, JS - Courses
 </div>
 
 ## DevOps
-- <a href="#">Coming Soon</a>
+- Overview & Intro to DevOps <a href="#"></a>
+- OS & Linux Basics <a href="#"></a>
+- Version Control with Git <a href="#"></a>
+- Build & Package Manger Tools <a href="#"></a>
+- Cloud & IaaS <a href="#"></a>
+- Artivact Repo Manager <a href="#"></a>
+- Containers <a href="https://www.youtube.com/watch?v=3c-iBn73dDE"> Nana</a>
+- Build Automation (CI/CD) with Jenkins <a href="https://www.youtube.com/playlist?list=PL9ooVrP1hQOGM6eCsjnfAousUSvpqD8dW">edureka!</a>
+- AWS Services <a href="https://www.youtube.com/playlist?list=PLOoZRfEtk6kWSM_l9xMjDh-_MJXl03-pf">AWS SAA-C02 *AWS Riyadh User Group*</a>
+- Container Orchestration <a href="#"></a>
+- K8s on AWS <a href="#"></a>
+- IaC with Terraform <a href="#"></a>
+- Scripting Language Basics <a href="#"></a>
+- Automation with Python <a href="#"></a>
+- Configuration Management <a href="https://www.youtube.com/playlist?list=PL9ooVrP1hQOE7DNnBow4p5SvIBdBIggC2">edureka!</a>
+-  Monitoring eith Prometheus <a href="#"></a>
 <div align="right">
   <b><a href="https://github.com/i-radi/Fullstack-Roadmap">↥ Back To Top</a></b>
 </div>
