@@ -1,0 +1,79 @@
+Docker Commands:
+  basics:        
+    docker -v
+    docker ps -all
+    docker container ls -a
+    docker help run
+  images:
+    docker pull hello-world
+    docker run hello-world // pull image if not exist, create new container, run it
+    docker image rm hello-world
+    docker image rm 7b8b1ae0669d
+  containers:
+    docker container run -d redis:alpine
+    docker container run --detach --publish 80:80 --name <name> nginx
+    docker container stop <name>
+    docker container start <name>
+    docker rm 7b8b1ae0669d
+    docker commit <container name> <image name>:<tag name> //create image from container
+  bind hostport to containerport:
+    #diffrent host port to the same container port
+    docker run -p 6000:6379 redis
+    docker run -p 6001:6379 redis
+  debug:
+    docker logs 7b8b1ae0669d
+    docker stats 7b8
+    docker info
+    docker inspect redis //metadata-exposed port
+    docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 7b8
+    docker exec -it <container name> bash //open bash in nginx
+    docker history redis 
+  docker hub:
+    docker tag redis ibrahimradi/redis:dev //copy from src to dist
+    docker login
+    docker push ibrahimradi/redis:1.0
+    docker logout
+    docker build --tag <name> . //create new image
+    dotnet new mvc --name hrapp --output dockerhrapp
+    dotnet build
+    docker build -t counter-image -f Dockerfile .
+    docker images
+    docker run -d -p 8080:80 --name hrapp dockerhrapp	
+    docker run -d --name mymariadb -e MARIADB_ROOT_PASSWORD=1234 -v <volume name>:/var/lib/mysql mariadb
+    docker inspect mariadb
+  volumes:
+    docker volume ls
+    docker volume create maria-vol
+    docker exec -it mymariadb bash 
+    mysql -u root -p //write sql commands
+    exit
+    exit
+    docker container run -d --name nginx_dashboard -p 8080:80 -v ${pwd}:/usr/share/nginx/html nginx  //shared files
+    docker run -v host dir:container dir ==> host volumes
+    docker run -v container dir ==> anonymous volumes
+    docker run -v name:container dir ==> named volumes ✅
+  networks:
+    docker network ls
+    docker network inspect
+    docker network inspect bridge
+    docker network create <network name>
+    docker network create --driver bridge n1
+    docker network ls
+    docker network inspect n1
+    docker run --name testubuntu --network=n1 -d -it ubuntu
+    docker run --name testnginx --network=n1 -d -it nginx //now ubuntu and nginx in the same network
+    docker container inspect testubuntu
+    docker network create --driver bridge --subnet 172.25.0.0/16 n2
+    docker network disconnect n1 test
+    docker network connect n2 test
+    docker run --network=n2 -it alpine ash
+    #ping 172.25.0.2
+  compose:
+    docker-compose -v 
+    docker compose up -d
+    docker compose down
+  dotnet:
+    dotnet tool install --global dotnet-build-image
+    dotnet build-image -t <image name>
+    docker run -p 80:8080 <image name>
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
