@@ -1,0 +1,43 @@
+version: '3.9'
+networks:
+  dev:
+    driver: bridge
+
+services:
+  demo-app:
+    image: docker.io/library/demoapp
+    depends_on:
+      - "app_db"
+    container_name: demoapp-services
+    ports:
+      - "8088:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=app_db;Port=5432;Database=SampleDb;Username=postgres;Password=YourPassword;
+      - ASPNETCORE_URLS=http://+:80
+
+  app_db:
+    image: postgres:latest
+    container_name: app_db
+    environment:
+      POSTGRES_PASSWORD: YourPassword
+      POSTGRES_DB: SampleDb
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - app_data:/var/lib/postgresql/data
+    networks:
+      - dev
+
+volumes:
+  app_data:
+
+networks:
+  dev:
+    external: true
+---------------------------------------------------------------------------
+docker-compose up

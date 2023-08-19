@@ -1,0 +1,83 @@
+Linux developed by C language
+
+Linux distributions:
+redhat
+fedora based on redhat
+debian
+ubuntu based on ubuntu
+linuxMint
+centOS
+open SUSE
+
+Linux commamds:
+pwd
+echo
+cd
+sudo
+ls
+cp
+rm
+mv
+clear
+cat					open file in the same window
+less				open file in the new window
+grep				search string in file
+sort
+mkdir				create folder
+touch				create many file
+rmdir
+
+man ls 				= --help
+whoami
+sudo bash			switch to admin user
+su hema
+sudo useradd radi	add user
+sudo passwd radi
+sudo userdel radi
+sudo vi file.txt	open file
+sudo nano file.txt	open file
+chown				change owner of file
+chmod				change mode
+lsof				list of open files
+id radi
+tar -cvf filename src-folder	zip file
+sed 's/first/last/' text.txt 	replace last instead of first
+uniq filename		remove duplicate lines in file
+watch -d free -m	free space of computer
+eval --help 		execute args as a shell command
+history				list of last 5 commands
+ssh slave-ip		access to slave machine if you is master
+ifconfig -a			all available interfaces 
+ipconfig			ip address machine
+ipaddress			ip address machine
+ip link				link layer details
+netstat -a	 		network info
+nslook google.com	ip ingo of site
+awk '/radi/{print}'test.txt		print each line corains radi
+cat twst.txt | tr "[a-z]" "[A-Z]" 	convert all characters to uppercase
+env					all enviroment variables
+
+sudo apt-get install vscode
+sudo yun=m install vscode
+sudo df -h 			available spaces in desk and memory
+sudo opt-cache pkgnames vscode
+sudo opt-cache search python
+sudo opt-cache show python
+sudo opt-cache showpkg python
+bash test.sh		run script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

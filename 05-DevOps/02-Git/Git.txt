@@ -1,0 +1,30 @@
+Git Commands:
+git config
+git init
+git add *
+git commit
+git pull
+git push
+git clone
+git show
+git remote
+git branch
+git checkout
+git merge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
