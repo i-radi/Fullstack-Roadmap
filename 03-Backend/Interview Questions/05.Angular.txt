@@ -1,0 +1,26 @@
+- 25 Angular Interview questions and answers :-
+Question 1  :- What the use of Angular ?
+Question 2  :- Differentiate between AngularJS vs Angular ?
+Question 3 :-  What are directives in Angular ?
+Question 4 :- Explain the different types of Angular directives ?
+Question 5  :- Explain the importance of NPM and Node_Modules folder ?
+Question 6 :- Explain the importance of Package.json file in Angular ?
+Question 7 :- What is typescript and why do we need it ?
+Question 8 :- Explain importance of Angular CLI ?
+Question 9 :- Explain the importance of Component and Modules ?
+Question 10 :- What is a decorator in Angular ?
+Question 11 :- What are Annotation or MetaData ?
+Question 12 :- What is a template ?
+Question 13 :- Explain the four types of Data bindings in Angular ?
+Question 14 :- Explain architecture of Angular ?
+Question 15 :- What is SPA in Angular ?
+Question 16 :- How to implement SPA in Angular ?
+Question 17 :- How to implement routing in Angular ?
+Question 18 :- Explain Lazy Loading ? 
+Question 19 :- How to implement Lazy Loading in Angular ?
+Question 20 :- Define Services ?
+Question 21 :- What is Dependency Injection ?
+Question 22:- How to implement Dependency Injection ?
+Question 23 :- Whats the benefit of Dependency Injection ?
+Question 24 :- Differentiate between ng Serve and ng build ?
+Question 25 :- Explain the --prod parameter in ng build ?
