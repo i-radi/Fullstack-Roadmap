@@ -1,0 +1,48 @@
+- Firat Interview "Nagwa":
+Q1. What you know about RabbitMQ?
+Q2. What is types of Indexes?
+Q3. When use each type of Indexes?
+Q4. Can have multi non clustered index 
+Q5. Must non clustered index is unique value?
+Q6. What is the important of Indexes?
+Q7. What's differnt between function and stored proceducer?
+Q8. What is encrease performance when select data (function and stored proceducer)?
+Q9. What's differnt between TempTable and View?
+Q10. What's CTE? When use it? 
+Q11. What's differnt between TempTable and CTE?
+Q12. What's differnt between TempTable and HashedTable?
+Q13. How to implement Dynamic Query?
+Q14. What is Relationship between department and Employee? 
+Q15. How to select deparments and each employees in it?
+Q16. How to select second department of number employees?
+Q17. How to encrease select data from single large table?
+Q18. How to decoment API?
+Q19. What's differnt between GET and POST methods?
+Q20. What is types of API methods
+Q21. What's differnt between POST, Put, Patch methods?
+Q22. How to implement login API?
+Q23. How to implement logger system?
+Q24. Can i implement logger in all system or in controllers only?
+Q25. What is action filter in APIs?
+Q26. What's differnt between ASP.Net and ASP.Net Core methods?
+Q27. What is middleware in ASP.Net?
+Q28. What is Design Patterns?
+Q29. What you know about CQRS?
+Q30. What you know about Reposetiry Pattern?
+Q31. What is Types of Loading in EF?
+Q32. How to implement relation in between Entities?
+Q33. How detect foreign Key in Entity?
+Q34. What's differnt between SingleOrDefualt and FirstOrDefault?
+Q35. What is better in performance FirstOrDefault(=>) or where.FirstOrDefault?
+Q36. What is as tracking or as no tracking?
+Q37. What you know about FluentValidation?
+Q38. What you know about Redis?
+Q39. What you know about NoSQL?
+Q40. What you know about Firebase?
+Q41. When use SQL or No SQL?
+Q42. What's differnt between sync and async?
+Q43. What you know about Extention Methods?
+Q44. What's differnt between List and Array?
+Q45. Can Write List[2]?
+Q46. When store data in list or Dectianary?
+Q47. what is best data structure to store lookup table?

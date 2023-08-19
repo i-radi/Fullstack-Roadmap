@@ -1,0 +1,181 @@
+
+- C# Q&A Series :-
+- Questions on Stack, Heap, Boxing, Unboxing, Array, ArrayList, Generics, Threading.
+Question 1  :- Explain difference between .NET and C# ?
+Question 2  :- .NET Framework vs .NET Core vs .NET 5.0
+Question 3  :- What is IL ( Intermediate Language) Code ?
+Question 4  :- What is the use of JIT ( Just in time compiler) ?
+Question 5  :- Is it possible to view IL code ?
+Question 6  :- What is the benefit of compiling in to IL code ?
+Question 7  :- Does .NET support multiple programming languages ?
+Question 8  :- What is CLR ( Common Language Runtime) ?
+Question 9  :- What is managed and unmanaged code ?
+Question 10 :- Explain the importance of Garbage collector ?
+Question 11 :- Can garbage collector claim unmanaged objects ?
+Question 12 :- What is the importance of CTS ?
+Question 13 :- Explain CLS ? 
+Question 14 :- Difference between Stack vs Heap ?
+Question 15 :- What are Value types & Reference types?
+Question 16 :- Explain boxing and unboxing ?
+Question 17 :- What is consequence of boxing and unboxing ?
+Question 18 :- Explain casting,implicit casting and explicit casting ?
+Question 19 :- What can happen during explicit casting ?
+Question 20 :- Differentiate between Array and ArrayList ?
+Question 21 :- Whose performance is better array or arraylist ?
+Question 22 :- What are generic collections ?
+Question 23 :- What are threads (Multithreading)?
+Question 24 :- How are threads different from TPL ?
+Question 25 :- How do we handle exceptions in C#(try/catch)?
+Question 26 :- What is the need of finally?
+Question 27 :- Why do we need the out keyword ?
+Question 28 :- What is the need of Delegates ?
+Question 29 :- What are events ?
+Question 30 :- Whats the difference between Abstract class and interface ?
+
+- Questions on Delegates, Event & Delegates vs Events.
+Question 31 - What is a Delegate and how to create a Delegate?
+Question 32 - Where have you used Delegates?
+Question 33 - What is a Multicast Delegates?
+Question 34 - What is an Event?
+Question 35 - How to Create an Event?
+Question 36 - Delegate VS Events.
+
+- Questions OOP, Abstraction, Encapsulation, Inheritance, Virtual, Overriding and overloading.
+Question 37 :- Why do we need OOP ?
+Question 38 :- What are the important pillars of OOPs ?
+Question 39 :- What is a class and object ?
+Question 40 :- Abstraction vs Encapsulation?
+Question 41 :- Explain Inheritance ?
+Question 42 :- Explain virtual keyword ?
+Question 43 :- What is overriding ?
+Question 44 :- Explain overloading ?
+Question 45 :- Overloading vs Overriding ?
+
+- Questions Polymorphism, Static vs Dynamic polymorphism and operator overloading.
+Question 44  :- What is polymorphism ?
+Question 45  :- Can polymorphism work with out inheritance ?
+Question 46  :- Explain static vs dynamic polymorphism ?
+Question 47  :- Explain operator overloading ?
+
+- Tricky Questions around Abstract classes and Interfaces.
+Question 48  :- Why do we need Abstract classes ?
+Question 49  :- Are Abstract methods virtual ?
+Question 50  :- Can we create a instance of Abstract classes ?
+Question 51  :- Is it compulsory to implement Abstract methods ?
+Question 52  :- Why simple base class replace Abstract class ?
+Question 53  :- Explain interfaces and why do we need it ?
+Question 54  :- Can we write logic in interface ?
+Question 55  :- Can we define methods as private in interface ?
+Question 56  :- If i want to change interface whats the best practice ?
+Question 57  :- Explain Multiple inheritance in Interface ?
+Question 58  :- Explain Interface Segregation principle ?
+Question 59  :- Can we create instance of interface ?
+Question 60  :- Can we do Multiple inheritance with Abstract classes ?
+
+- Questions around constructors & in parent child which constructor fires first.
+Question 62 :- Why do we need constructors ?
+Question 63 :- In parent child which constructor fires first ?
+Question 64 :- How are initializers executed ?
+Question 65 :- How are static constructors executed in Parent child ?
+Question 66 :- When does static constructor fires ?
+
+- SOLID principles :-
+1) S  stands for single responsibility principle (SRP)
+2) O  stands for open closed principle (OCP)
+3) L  stands for Liskov substitution principle (LSP)
+4) I  stands for interface segregation principle (ISP)
+5) D  stands for Dependency injection principle (DIP)
+
+Single responsibility principle (SRP) :
+A class should take one responsibility and there should be one reason to change that class.
+
+Open closed principle (OCP) :
+A class should be open for extension but closed for any modification.
+
+Liskov substitution principle (LSP) :
+This principle says, Child class should not break parent class’s type definition and behaviour.
+
+Interface segregation principle (ISP) :
+This principle tells that any class should not be forced to use an interface which is irrelevant to it. 
+
+Dependency inversion principle (DIP) :
+This principle tells that not to write tightly coupled code because it becomes so hard to maintain the application when it grows bigger. 
+
+There are 3 types to Dependency inversion :
+1) Constructor injection
+2) Property injection
+3) Method injection
+
+- C# Design Patterns :-
+Q1. Factory pattern,Lazy Pattern and RIP Pattern
+Q2. Unity, Strategy, IOC, SRP and SOC design pattern.
+Q3. Generic repository pattern and Template pattern 
+Q4. Adapter Pattern and Repository with EF
+Q5. UOW(Unit of Work)
+Q6. Decorator Pattern
+Q7. Iterator Pattern
+Q8. Prototype and Memento Pattern
+Q9. Implementing complex object creation using Factory Method
+Q10. Implementing NULL Design Pattern and Mediator Pattern.
+
+- Top 60 questions asked in .NET interviews.
+Q1. What are the advantages of OOPS?
+Q2. What are the limitations of OOPS?
+Q3. What are the different types of Inheritance?
+Q4. How to prevent a class from being Inherited?
+Q5. What is Polymorphism and what are its types?
+Q6. What is Method Overloading? In how many ways a method can be overloaded?
+Q7. What is the difference between Overloading and Overriding?
+Q8. What is the difference between an Abstract class and an Interface (atleast 4)? 
+Q9. When to use Interface and when Abstract class?
+Q10. Why to even create Interfaces?
+Q11. Do Interface can have a Constructor?
+Q12. Can you create an instance of an Abstract class or an Interface?
+Q13. What is the difference between “out” and “ref” parameters?
+Q14. What is the purpose of “params” keyword?
+Q15. What are Access Specifiers? What is the default access modifier in a class?
+Q16. How to implement Exception Handling in C#?
+Q17. Can we execute multiple Catch blocks?
+Q18. What is a Finally block and give an example when to use it?
+Q19. Can we have only “Try” block without “Catch” block?
+Q20. What is the difference between “throw ex” and “throw”?
+Q21. What are the Loop types in C#?
+Q22. What is the difference between “continue” and “break” statement?
+Q23. What is the difference between Array and ArrayList (atleast 2)?
+Q24. What is the difference between Array list and Hash table?
+Q25. What is “this” keyword in C#? When to use it?
+Q26. What is the purpose of “using” keyword in C#?
+Q27. What is the difference between “is” and “as” operators?
+Q28. What is the difference between “Readonly” and “Constant” variables (atleast 3)?
+Q29. What is Boxing and Unboxing?
+Q30. What is the difference between “String” and “StringBuilder”? When to use what?
+Q31. What are Nullable types?
+Q32. What are the important components of .NET framework? What are their roles?
+Q33. What is an Assembly? What are the different types of assembly in .NET?
+Q34. What is GAC?
+Q35. What is Garbage Collection(GC)?
+Q36. Can we force Garbage Collector to run?
+Q37. What is the difference between Process and Thread?
+Q38. Explain Multithreading?
+Q39. What is Reflection?
+Q40. What is MVC (Model View Controller)? Explain MVC Life cycle.
+Q41. What are the advantages of MVC over Web Forms (at least 3)?
+Q42. What are the different return types of a controller Action method?
+Q43. What are Filters and their types in MVC?
+Q44. What is Authentication and Authorization in ASP.NET MVC?
+Q45. What are the types of Authentication in ASP.NET MVC?
+Q46. What is Output Caching in MVC? How to implement it?
+Q47. What is the difference between ViewData, ViewBag & TempData?
+Q48. How can we pass the data from controller to view in MVC?
+Q49. What is Partial View?
+Q50. What are Areas in MVC?
+Q51. How Validation works in MVC?
+Q52. Explain the concept of MVC Scaffolding?
+Q53. What is Bundling and Minification in MVC?
+Q54. How to implement Security in web applications in MVC?
+Q55. What are the events in Page Life Cycle? In which event are the controls fully loaded?
+Q56.  What is the difference between Server.Transfer() and Response.Redirect()?
+Q57. Where the ViewState is stored after the page postback?
+Q58. What are the different types of Caching?
+Q59. What are the different Session state management options available in asp.net?
+Q60. What are the main components of ADO.NET?

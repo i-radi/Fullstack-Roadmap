@@ -1,0 +1,62 @@
+-SQL Server Interview Questions and Answers
+Question 1  :- Explain normalization ?
+Question 2  :- How to implement normalization ?
+Question 3  :- What is denormalization ?
+Question 4  :- Explain OLTP vs OLAP ?
+Question 5  :- Explain 1st,2nd and 3rd Normal form ?
+Question 6  :- Primary Key vs Unique key ?
+Question 7  :- Differentiate between Char vs Varchar ?
+Question 8  :- Differentiate between Char vs NChar ? 
+Question 9  :- Whats the size of Char vs NChar ?
+Question 10 :- What is the use of Index ?
+Question 11 :- How does it make search faster?
+Question 12 :- What are the two types of Indexes ?
+Question 13 :- Clustered vs Non-Clustered index
+Question 14 :- Function vs Stored Procedures
+Question 15 :- What are triggers and why do you need it ?
+Question 16 :- What are types of triggers ?
+Question 17 :- Differentiate between After trigger vs Instead Of ? 
+Question 18 :- What is need of Identity ?
+Question 19 :- Explain transactions and how to implement it ?
+Question 20 :- What are inner joins ?
+Question 21 :- Explain Left join ?
+Question 22 :- Explain Right join ?
+Question 23 :- Explain Full outer joins ?
+Question 24 :- Explain Cross joins ?
+
+- SQL Interview Questions & Answers - Part 2 :-
+Question 25:-Why do we need UNION ?
+Question 26:-Differentiate between Union vs Union All ?
+Question 27:-can we have unequal columns in Union?
+Question 28:-Can column have different data types in Union ?
+Question 29:- Which Aggregate function have you used ?
+Question 30:- When to use Group by ?
+Question 31:- Can we select column which is not part of group by ?
+Question 32:- What is having clause ?
+Question 33:- Having clause vs Where clause 
+Question 34:- How can we sort records ?
+Question 35:- Whats the default sort ?
+Question 36:- How can we remove duplicates ?
+Question 37:- Select the first top X records ?
+Question 38:- How to handle NULLS ?
+Question 39:- What is use of wild cards ?
+Question 40:- What is the use of Alias ?
+Question 41:- How to write a case statement ?
+Question 42:- What is self reference tables ?
+Question 43:- What is self join ?
+Question 44:- Explain the between clause ?
+
+- SQL Interview Questions & Answers - Part 3 :-
+Question 45:- Explain SubQuery?
+Question 46:- Can inner Sub query return multiple results?
+Question 47:- What is Co-related Query?
+Question 48:- Differentiate between Joins and SubQuery?
+Question 49:- Performance Joins vs SubQuery?
+
+- SQL Server Interview Questions & Answers - Part 4 :-
+Question 50:- Find NTH Highest Salary in SQL.
+
+- SQL Server  Interview Questions & Answers - Part 5
+Question 51:-  Select the top nth highest salary using correlated Queries?
+Question 52:-  Select top nth using using T-SQL
+Question 53:-  Performance comparison of all the methods.

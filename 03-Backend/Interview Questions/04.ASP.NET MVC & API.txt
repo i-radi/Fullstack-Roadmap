@@ -1,0 +1,75 @@
+- ASP.NET MVC Interview questions and answers. 
+Question 1 :- What is ASP .NET MVC Core ?
+Question 2 :- Differentiate between ASP .NET Webforms vs MVC vs MVC core ?
+Question 3 :- Explain MVC Architecture ?
+Question 4 :- Why do we have wwwroot folder ?
+Question 5 :- Explain the importance of appsettings.json ?
+Question 6 :- How to read configurations from appsettings.json ?
+Question 7 :- What is dependency injection ?
+Question 8 :- Why do we need dependency injection ?
+Question 9 :- How do we implement dependency injection ?
+Question 10 :- What is the use of Middleware ?
+Question 11 :- How to create a Middle ware ?
+Question 12 :- What does startup.cs file do ?
+Question 13 :- ConfigureServices vs Configure method ?
+Question 14 :- Explain the different Ways of doing DI?
+Question 15 :- Explain Scoped vs Transient vs Singleton ? 
+Question 16 :- What is Razor ?
+Question 17 :- How to pass Model data to a View ?
+Question 18 :- What is the use of Strongly typed views ?
+Question 19 :- Explain the concept of ViewModel in MVC ?
+Question 20 :- What is Kestrel Web Server ?
+Question 21 :- Why Kestrel when we have IIS server ?
+Question 22 :- What is the concept of Reverse proxy ?
+Question 23 :- What are cookies ?
+Question 24 :- What is the need session management ?
+Question 25 :- What are the various ways of doing Session management in ASP.NET ?
+
+- ASP.NET MVC Interview Questions & Answers - Part 2
+Question 26  :- What exactly is a session ?
+Question 27  :- Explain "HTTP is a stateless protocol" ?
+Question 28  :- What are various way of doing session management ?
+Question 29  :- Are sessions enabled by default ?
+Question 30  :- How to enable sessions in MVC core ?
+Question 31  :- Are sessions variables shared(global) between users ?
+Question 32  :- Do session variables use cookies ?
+Question 33  :- What is a cookie ?
+Question 34  :- Explain idle time out in sessions ?
+Question 35  :- What does a Context means in HTTP ?
+
+- ASP.NET MVC Interview Questions & Answers - Part 3
+Question 36 :- When should we use viewdata ?
+Question 37 :- How to pass data from controller to view ?
+Question 38 :- In same request can viewdata persist across actions ?
+Question 39 :- ViewData vs ViewBag
+Question 40 :- How does ViewBag work internally?
+Question 41 :- Explain ViewModel?
+Question 42 :-  ViewBag vs ViewModel whats the best practice?
+
+- ASP.NET MVC Interview Questions & Answers - Part 4
+Question 43  :- Explain tempdata ?
+Question 44  :- Can tempdata persist across action redirects ?
+Question 45  :- How is tempdata different from viewdata ?
+Question 46  :- If tempdata is read is it available for next request ?
+Question 47  :- How to persist tempdata ?
+Question 48  :- What does Keep do in tempdata ?
+Question 49  :- Explain Peek in tempdata ?  
+Question 50  :- How is tempdata different from session variables ?
+Question 51  :- If i restart the server does tempdata, session stay ?
+Question 52  :- Is tempdata private to a user ?  
+Question 53  :- ViewData vs ViewBag vs Tempdata vs Session variables
+
+- ASP.NET MVC Interview Questions & Answers - Part 5
+Question 54  :- What is  WebAPI ?
+Question 55  :- What is the advantage of WebAPI ?
+Question 56  :- Explain REST and Architectural constraints of REST?
+Question 57  :- Can we use  TCP/IP protocol with Web API?
+Question 58  :- How WebAPI different from MVC controller ?
+Question 59  :- What is content negotiations in Web API ?
+Question 60  :- WebAPI vs WCF ?
+Question 61  :- WCF REST vs WebAPI REST ?
+Question 62  :- How to return HTTP status codes ?
+Question 63  :- For error which status code is returned ?
+Question 64  :- How did you secure your web API ?
+Question 65  :- How do current JS frameworks work with webAPI ?
+Question 66  :- How did you implement JWT token security ?
