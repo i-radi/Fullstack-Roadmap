@@ -1,0 +1,4 @@
+{
+	"create jenkins container": "docker run --name RadiJenkins -p 9090:8080 -p 50000:50000 -v radi_jenkins:/var/jenkins_home jenkins/jenkins",
+	
+}
