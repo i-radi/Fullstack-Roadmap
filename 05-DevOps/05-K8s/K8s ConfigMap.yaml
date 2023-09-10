@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-configmap
+data:
+  database-url: "mysql://db.example.com:3306"
+  api-key: "your-api-key"
