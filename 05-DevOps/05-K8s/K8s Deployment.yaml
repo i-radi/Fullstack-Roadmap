@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-deployment
+  name: app-deployment
 spec:
   replicas: 1
   selector:
@@ -17,3 +17,14 @@ spec:
           image: your/sample-image:latest
           ports:
             - containerPort: 80
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: sample-configmap
+                  key: database-url
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: sample-secret
+                  key: api-key
