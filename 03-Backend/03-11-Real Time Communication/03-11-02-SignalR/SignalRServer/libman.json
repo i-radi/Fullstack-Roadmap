@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "signalr-asp-net@1.0.3",
+      "destination": "wwwroot/signalr-asp-net/",
+      "files": [
+        "src/signalR.js"
+      ]
+    },
+    {
+      "library": "@microsoft/signalr@7.0.11",
+      "destination": "wwwroot/microsoft/signalr/",
+      "files": [
+        "dist/browser/signalr.js"
+      ]
+    }
+  ]
+}

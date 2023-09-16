@@ -1,7 +1,9 @@
 using System;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace SignalRServer.Hubs
 {
@@ -25,7 +27,7 @@ namespace SignalRServer.Hubs
 
         public async Task SendMessageAsync(string message)
         {
-            var routeOb = JsonConvert.DeserializeObject<dynamic>(message);
+            var routeOb = JsonSerializer.Deserialize<dynamic>(message);
             Console.WriteLine("To: " + routeOb.To.ToString());
             Console.WriteLine("Message Recieved on: " + Context.ConnectionId );
             if(routeOb.To.ToString() == string.Empty)
