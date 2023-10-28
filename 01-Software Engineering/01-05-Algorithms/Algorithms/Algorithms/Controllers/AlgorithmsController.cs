@@ -33,10 +33,16 @@ namespace Algorithms.Controllers
         }
 
         [HttpGet("MergeSort")]
-        public IActionResult CalcCorrelation([FromQuery] int[] array)
+        public IActionResult MergeSort([FromQuery] int[] array)
         {
             _algorithmService.MergeSort(array, 0, array.Length - 1);
             return Ok(array);
+        }
+
+        [HttpGet("BinarySearch")]
+        public IActionResult BinarySearchAlgorithm([FromQuery] int[] array, int target)
+        {
+            return Ok(_algorithmService.BinarySearchAlgorithm(array, target));
         }
 
     }
