@@ -45,5 +45,12 @@ namespace Algorithms.Controllers
             return Ok(_algorithmService.BinarySearchAlgorithm(array, target));
         }
 
+        [HttpGet("SegregatePositiveAndNegativeNumbers")]
+        public IActionResult SegregatePositiveAndNegativeNumbers([FromQuery] int[] array)
+        {
+            _algorithmService.SegregatePositiveAndNegativeNumbers(array, 0, array.Length - 1);
+            return Ok(array);
+        }
+
     }
 }

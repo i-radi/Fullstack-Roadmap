@@ -126,4 +126,65 @@ public class AlgorithmService : IAlgorithmService
         return -1;
     }
 
+    public void SegregatePositiveAndNegativeNumbers(int[] array, int start, int end)
+    {
+        if (end <= start) return;
+
+        int mid = (end + start) / 2;
+        SegregatePositiveAndNegativeNumbers(array, start, mid);
+        SegregatePositiveAndNegativeNumbers(array, mid + 1, end);
+        MergePositiveAndNegativeNumbers(array, start, mid, end);
+
+    }
+
+    public static void MergePositiveAndNegativeNumbers(int[] array, int start, int mid, int end)
+    {
+        int i, j, k;
+        int left_length = mid - start + 1;
+        int right_length = end - mid;
+
+        int[] left_array = new int[left_length];
+        int[] right_array = new int[right_length];
+
+        for (i = 0; i < left_length; i++)
+        {
+            left_array[i] = array[start + i];
+        }
+        for (j = 0; j < right_length; j++)
+        {
+            right_array[j] = array[mid + 1 + j];
+        }
+
+        i = 0;
+        j = 0;
+        k = start;
+
+        while (i < left_length && left_array[i] <= 0)
+        {
+            array[k] = left_array[i];
+            i++;
+            k++;
+        }
+        while (j < right_length && right_array[j] <= 0)
+        {
+            array[k] = right_array[j];
+            j++;
+            k++;
+        }
+
+        while (i < left_length)
+        {
+            array[k] = left_array[i];
+            i++;
+            k++;
+        }
+        while (j < right_length)
+        {
+            array[k] = right_array[j];
+            j++;
+            k++;
+        }
+
+    }
+
 }

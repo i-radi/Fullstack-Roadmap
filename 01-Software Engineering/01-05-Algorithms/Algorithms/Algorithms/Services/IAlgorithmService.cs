@@ -6,4 +6,5 @@ public interface IAlgorithmService
     double CalcCorrelation(List<double> xValues, List<double> yValues);
     void MergeSort(int[] array, int start, int end);
     int BinarySearchAlgorithm(int[] array, int target);
+    void SegregatePositiveAndNegativeNumbers(int[] array, int start, int end);
 }
