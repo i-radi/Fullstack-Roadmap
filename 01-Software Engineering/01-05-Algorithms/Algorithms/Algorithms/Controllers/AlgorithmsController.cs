@@ -31,5 +31,13 @@ namespace Algorithms.Controllers
             }
             return Ok(_algorithmService.CalcCorrelation(xValues, yValues));
         }
+
+        [HttpGet("MergeSort")]
+        public IActionResult CalcCorrelation([FromQuery] int[] array)
+        {
+            _algorithmService.MergeSort(array, 0, array.Length - 1);
+            return Ok(array);
+        }
+
     }
 }
