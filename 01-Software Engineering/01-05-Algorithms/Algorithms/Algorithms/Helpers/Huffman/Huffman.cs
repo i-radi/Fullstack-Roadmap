@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms.Helpers;
+namespace Algorithms.Helpers.Huffmans;
 
 public class Huffman
 {
@@ -50,7 +50,7 @@ public class Huffman
         }
 
         //Generate Codes
-        this.generateCodes(minHeap.Peek(), "");
+        generateCodes(minHeap.Peek(), "");
 
     }
 

@@ -1,4 +1,5 @@
-using Algorithms.Helpers;
+using Algorithms.Helpers.Huffmans;
+using Algorithms.Helpers.Knapsack;
 using Algorithms.Requests;
 using Algorithms.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -78,6 +79,15 @@ namespace Algorithms.Controllers
         {
             Huffman huff = new Huffman(msg);
             return Ok(huff.codes);
+        }
+
+        [HttpPost("FractionalKnapsackProblem")]
+        [SwaggerOperation(description: "values = { 4, 9, 12, 11, 6, 5 }, weights = { 1, 2, 10, 4, 3, 5 }, capacity = 12")]
+        public IActionResult FractionalKnapsackProblem(FractionalKnapsackProblemRequest request)
+        {
+            return Ok(KnapsackSolver
+                        .SolveFractionalKnapsack(request.values, request.weights, request.capacity)
+                        .ToString());
         }
     }
 }

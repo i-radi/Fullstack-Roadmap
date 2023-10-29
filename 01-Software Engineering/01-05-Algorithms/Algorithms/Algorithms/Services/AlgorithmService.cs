@@ -226,9 +226,9 @@ public class AlgorithmService : IAlgorithmService
 
         Dictionary<char, int> freqDictionary = new Dictionary<char, int>();
         int[,] freqSorted = SortHash(freq);
-        for (int i = 0;i < freqSorted.GetLength(0);i++)
+        for (int i = 0; i < freqSorted.GetLength(0); i++)
         {
-            freqDictionary.Add((char)freqSorted[i,0], freqSorted[i, 1]);
+            freqDictionary.Add((char)freqSorted[i, 0], freqSorted[i, 1]);
         }
         return freqDictionary;
     }
