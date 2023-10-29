@@ -65,5 +65,11 @@ namespace Algorithms.Controllers
             return Ok(_algorithmService.GreedyActivitySelector(request.StartArray, request.EndArray));
         }
 
+        [HttpGet("SortedCharactersFrequencies")]
+        public IActionResult SortedCharactersFrequencies([FromQuery] string msg)
+        {
+            return Ok(_algorithmService.CharFreqAnyCodeMethod(msg));
+        }
+
     }
 }
