@@ -7,4 +7,5 @@ public interface IAlgorithmService
     void MergeSort(int[] array, int start, int end);
     int BinarySearchAlgorithm(int[] array, int target);
     void SegregatePositiveAndNegativeNumbers(int[] array, int start, int end);
+    List<int> GreedyActivitySelector(int[] startArr, int[] endArr);
 }

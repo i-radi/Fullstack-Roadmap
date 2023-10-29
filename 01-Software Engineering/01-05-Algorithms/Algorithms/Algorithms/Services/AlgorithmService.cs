@@ -1,4 +1,7 @@
-﻿namespace Algorithms.Services;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+using System;
+
+namespace Algorithms.Services;
 
 public class AlgorithmService : IAlgorithmService
 {
@@ -187,4 +190,19 @@ public class AlgorithmService : IAlgorithmService
 
     }
 
+    public List<int> GreedyActivitySelector(int[] startArr, int[] endArr)
+    {
+        List<int> results = new List<int> { 0 };
+        int j = 1;
+
+        for (int i = 0; i < startArr.Length; i++)
+        {
+            if (startArr[i] >= endArr[j])
+            {
+                results.Add(i);
+                j = i;
+            }
+        }
+        return results;
+    }
 }
