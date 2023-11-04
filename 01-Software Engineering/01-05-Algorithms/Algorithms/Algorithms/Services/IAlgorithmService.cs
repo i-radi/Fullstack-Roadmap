@@ -9,4 +9,5 @@ public interface IAlgorithmService
     void SegregatePositiveAndNegativeNumbers(int[] array, int start, int end);
     List<int> GreedyActivitySelector(int[] startArr, int[] endArr);
     Dictionary<char, int> CharFreqAnyCodeMethod(string message);
+    (string MinimumCost, string MinimumPath) StagecoachProblem(string[] labels, int[][] data);
 }

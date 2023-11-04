@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Algorithms.Helpers;
+using Microsoft.OpenApi.Validations;
+using System.Collections;
 
 namespace Algorithms.Services;
 
@@ -315,6 +317,52 @@ public class AlgorithmService : IAlgorithmService
             k++;
         }
 
+    }
+
+    #endregion
+
+    #region Dynamic Programming
+
+    public (string MinimumCost, string MinimumPath) StagecoachProblem(string[] labels, int[][] data)
+    {
+        int n = data.Length;
+        var states = new State[n];
+        states[n - 1] = new State { From = "", To = "", Cost = 0 };
+
+        for (int i = n - 2; i >= 0; i--)
+        {
+            states[i] = new State { From = labels[i], To = labels[0], Cost = int.MaxValue };
+            for (int j = i + 1; j < n; j++)
+            {
+                if (data[i][j] == 0) continue;
+
+                int newCost = data[i][j] + states[j].Cost;
+
+                if (newCost < states[i].Cost)
+                {
+                    states[i].To = labels[j];
+                    states[i].Cost = newCost;
+                }
+            }
+        }
+
+        var minCost = "Minimum Cost: " + states[0].Cost;
+
+        List<string> path = new List<string> { "A" };
+        int y = 0;
+        int z = 0;
+        while (y < states.Length)
+        {
+            if (states[y].From == path[z])
+            {
+                path.Add(states[y].To);
+                z++;
+            }
+            y++;
+        }
+
+        var minPath = "Minimum path: " + string.Join(" -> ", path);
+        return (minCost, minPath);
     }
     #endregion
 }

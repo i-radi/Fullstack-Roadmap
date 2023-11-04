@@ -89,5 +89,28 @@ namespace Algorithms.Controllers
                         .SolveFractionalKnapsack(request.values, request.weights, request.capacity)
                         .ToString());
         }
+
+        [HttpGet("StagecoachProblemDP")]
+        public IActionResult StagecoachProblemDP()
+        {
+            //all nodes inside graph
+            string[] labels = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+            //this table converted from graph
+            int[][] data = {
+                new int[] {0, 2, 4, 3, 0, 0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 7, 4, 6, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 3, 2, 4, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 4, 1, 5, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0, 0, 0, 1, 4, 0},
+                new int[] {0, 0, 0, 0, 0, 0, 0, 6, 3, 0},
+                new int[] {0, 0, 0, 0, 0, 0, 0, 3, 3, 0},
+                new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+                new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 4},
+                new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+            };
+
+            var (MinimumCost, MinimumPath) = _algorithmService.StagecoachProblem(labels, data);
+            return Ok(MinimumCost +"\n"+ MinimumPath);
+        }
     }
 }
