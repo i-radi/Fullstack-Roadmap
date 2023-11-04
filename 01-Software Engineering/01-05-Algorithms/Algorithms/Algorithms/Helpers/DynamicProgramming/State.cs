@@ -1,4 +1,4 @@
-﻿namespace Algorithms.Helpers;
+﻿namespace Algorithms.Helpers.DynamicProgramming;
 
 class State
 {

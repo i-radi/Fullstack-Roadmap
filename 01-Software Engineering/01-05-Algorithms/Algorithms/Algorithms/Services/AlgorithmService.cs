@@ -1,4 +1,4 @@
-﻿using Algorithms.Helpers;
+﻿using Algorithms.Helpers.DynamicProgramming;
 using Microsoft.OpenApi.Validations;
 using System.Collections;
 
