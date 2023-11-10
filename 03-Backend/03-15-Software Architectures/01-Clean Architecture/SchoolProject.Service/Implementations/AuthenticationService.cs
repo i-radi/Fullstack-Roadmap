@@ -46,7 +46,7 @@ namespace SchoolProject.Service.Implementations
 
         #region Handle Functions
 
-        public async Task<JwtAuthResult> GetJWTToken(User user)
+        public async Task<Data.Results.JwtAuthResult> GetJWTToken(User user)
         {
             var (jwtToken, accessToken) =await GenerateJWTToken(user);
             var refreshToken = GetRefreshToken(user.UserName);
@@ -82,9 +82,9 @@ namespace SchoolProject.Service.Implementations
             return (jwtToken, accessToken);
         }
 
-        private RefreshToken GetRefreshToken(string username)
+        private Data.Results.RefreshToken GetRefreshToken(string username)
         {
-            var refreshToken = new RefreshToken
+            var refreshToken = new Data.Results.RefreshToken
             {
                 ExpireAt = DateTime.Now.AddDays(_jwtSettings.RefreshTokenExpireDate),
                 UserName= username,
@@ -119,7 +119,7 @@ namespace SchoolProject.Service.Implementations
             return claims;
         }
 
-        public async Task<JwtAuthResult> GetRefreshToken(User user, JwtSecurityToken jwtToken, DateTime? expiryDate, string refreshToken)
+        public async Task<Data.Results.JwtAuthResult> GetRefreshToken(User user, JwtSecurityToken jwtToken, DateTime? expiryDate, string refreshToken)
         {
             var (jwtSecurityToken, newToken) = await GenerateJWTToken(user);
             var response = new JwtAuthResult();
