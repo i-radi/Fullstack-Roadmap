@@ -1,0 +1,6 @@
+@WindowsLogger_HostAddress = http://localhost:5121
+
+GET {{WindowsLogger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

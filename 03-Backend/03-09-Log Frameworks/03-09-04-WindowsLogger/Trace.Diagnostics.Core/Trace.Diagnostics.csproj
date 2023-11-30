@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\Mail\**" />
+    <Compile Remove="Core\Web\**" />
+    <EmbeddedResource Remove="Core\Mail\**" />
+    <EmbeddedResource Remove="Core\Web\**" />
+    <None Remove="Core\Mail\**" />
+    <None Remove="Core\Web\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\NativeMethods.cs" />
+  </ItemGroup>
+
+</Project>
