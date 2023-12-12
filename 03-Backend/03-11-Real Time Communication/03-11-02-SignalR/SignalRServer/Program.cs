@@ -1,28 +1,30 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SignalRServer.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowSpecificOrigin", builder =>
-    {
-        builder.WithOrigins("https://localhost:5001")
-               .WithOrigins("http://127.0.0.1:5500")
-               .AllowAnyMethod()
-               .AllowAnyHeader()
-               .AllowCredentials();
-    });
-});
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddRazorPages();
+
 builder.Services.AddSignalR();
 
 var app = builder.Build();
 
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthorization();
 
-app.UseCors("AllowSpecificOrigin");
+app.MapRazorPages();
+app.MapControllers();
 
 app.MapHub<ChatHub>("chatHub");
 

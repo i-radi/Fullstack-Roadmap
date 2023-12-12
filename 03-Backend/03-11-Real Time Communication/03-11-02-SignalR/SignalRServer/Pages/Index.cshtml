@@ -1,0 +1,74 @@
+﻿@page
+@model SignalRServer.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Chat page";
+}
+
+
+<h1 class="mb-3">SignalR Messaging</h1>
+<div class="mb-3">
+    <label for="username" class="form-label">Enter User Id: </label>
+    <input type="text" id="username" class="form-control">
+    <button id="connectButton" type="button" class="btn btn-primary m-4">Connect</button>
+</div>
+<div id="chatMessages" class="mb-3 allowList"></div>
+<div class="mb-3">
+    <label for="to" class="form-label">To: </label>
+    <input type="text" id="to" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="message" class="form-label">Message: </label>
+    <input type="text" id="message" class="form-control">
+    <button id="sendButton" type="button" class="btn btn-primary m-4">Send</button>
+</div>
+
+<script>
+
+    const hubUrl = 'https://localhost:5081/chatHub'; // Replace with the actual URL of your SignalR hub
+    const chatMessages = document.getElementById('chatMessages');
+    const usernameInput = document.getElementById('username');
+    const connectButton = document.getElementById('connectButton');
+    const messageInput = document.getElementById('message');
+    const sendButton = document.getElementById('sendButton');
+    const toClient = document.getElementById('to');
+
+    let connection;
+
+    connectButton.addEventListener('click', () => {
+        const username = usernameInput.value.trim();
+
+        if (username !== '') {
+            // Create the SignalR connection
+            connection = new signalR.HubConnectionBuilder()
+                .withUrl(`${hubUrl}?userId=${username}`)
+                .build();
+
+            // Configure the message handling
+            connection.on('GetMessageToUser', (user, message) => {
+                const messageElement = document.createElement('div');
+                messageElement.textContent = `GetMessageToUser => ${user}: ${message}`;
+                chatMessages.appendChild(messageElement);
+            });
+
+            // Start the connection
+            connection.start().then(() => {
+                console.log('Connected to the hub');
+            }).catch((err) => {
+                console.error(err);
+            });
+        }
+    });
+
+    sendButton.addEventListener('click', () => {
+        const message = messageInput.value.trim();
+
+        if (message !== '') {
+            connection.invoke('SendMessageToUser', toClient.value, message)
+                .catch((err) => {
+                    console.error(err);
+                });
+            messageInput.value = '';
+        }
+    });
+</script>
