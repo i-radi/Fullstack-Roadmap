@@ -1,121 +1,116 @@
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
+using WebSocketServer.Manager;
 
-namespace WebSocketServer.Middleware
+namespace WebSocketServer.Middleware;
+
+public class WebSocketServerMiddleware
 {
-    public class WebSocketServerMiddleware
+    private readonly RequestDelegate _next;
+
+    private WebSocketServerConnectionManager _manager;
+
+    public WebSocketServerMiddleware(RequestDelegate next, WebSocketServerConnectionManager manager)
     {
-        private readonly RequestDelegate _next;
+        _next = next;
+        _manager = manager;
+    }
 
-        private WebSocketServerConnectionManager _manager;
-
-        public WebSocketServerMiddleware(RequestDelegate next, WebSocketServerConnectionManager manager)
+    public async Task InvokeAsync(HttpContext context)
+    {
+        if (context.WebSockets.IsWebSocketRequest)
         {
-            _next = next;
-            _manager = manager;
-        }
+            WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
 
-        public async Task InvokeAsync(HttpContext context)
-        {
-            if (context.WebSockets.IsWebSocketRequest)
+            string conn = _manager.AddSocket(webSocket);
+
+            //Send ConnID Back
+            await SendConnID(webSocket, conn);
+
+            await Receive(webSocket, async (result, buffer) =>
             {
-                WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
-
-                string conn = _manager.AddSocket(webSocket);
-
-                //Send ConnID Back
-                await SendConnID(webSocket, conn);
-
-                await Receive(webSocket, async (result, buffer) =>
+                if (result.MessageType == WebSocketMessageType.Text)
                 {
-                    if (result.MessageType == WebSocketMessageType.Text)
-                    {
-                        Console.WriteLine($"Receive->Text");
-                        Console.WriteLine($"Message: {Encoding.UTF8.GetString(buffer, 0, result.Count)}");
-                        await RouteJSONMessageAsync(Encoding.UTF8.GetString(buffer, 0, result.Count));
-                        return;
-                    }
-                    else if (result.MessageType == WebSocketMessageType.Close)
-                    {
-                        string id = _manager.GetAllSockets().FirstOrDefault(s => s.Value == webSocket).Key;
-                        Console.WriteLine($"Receive->Close on: " + id);
+                    Console.WriteLine($"Receive->Text");
+                    Console.WriteLine($"Message: {Encoding.UTF8.GetString(buffer, 0, result.Count)}");
+                    await RouteJSONMessageAsync(Encoding.UTF8.GetString(buffer, 0, result.Count));
+                    return;
+                }
+                else if (result.MessageType == WebSocketMessageType.Close)
+                {
+                    string id = _manager.GetAllSockets().FirstOrDefault(s => s.Value == webSocket).Key;
+                    Console.WriteLine($"Receive->Close on: " + id);
 
-                        WebSocket sock;
-                        _manager.GetAllSockets().TryRemove(id, out sock);
-                        Console.WriteLine("Managed Connections: " + _manager.GetAllSockets().Count.ToString());
+                    WebSocket sock;
+                    _manager.GetAllSockets().TryRemove(id, out sock);
+                    Console.WriteLine("Managed Connections: " + _manager.GetAllSockets().Count.ToString());
 
-                        await sock.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
+                    await sock.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
 
-                        return;
-                    }
-                });
+                    return;
+                }
+            });
+        }
+        else
+        {
+            Console.WriteLine("Hello from 2nd Request Delegate - No WebSocket");
+            await _next(context);
+        }
+    }
+
+    private async Task RouteJSONMessageAsync(string message)
+    {
+
+        var routeOb = JsonSerializer.Deserialize<dynamic>(message);
+        Console.WriteLine("To: " + routeOb.To);
+
+        if (Guid.TryParse(routeOb.To.ToString(), out Guid guidOutput))
+        {
+            Console.WriteLine("Targeted");
+            var sock = _manager.GetAllSockets().FirstOrDefault(s => s.Key == routeOb.To.ToString());
+            if (sock.Value != null)
+            {
+                if (sock.Value.State == WebSocketState.Open)
+                    await sock.Value.SendAsync(Encoding.UTF8.GetBytes(routeOb.Message.ToString()), WebSocketMessageType.Text, true, CancellationToken.None);
             }
             else
             {
-                Console.WriteLine("Hello from 2nd Request Delegate - No WebSocket");
-                await _next(context);
+                Console.WriteLine("Invalid Recipient");
             }
         }
-
-        private async Task RouteJSONMessageAsync(string message)
+        else
         {
-
-            var routeOb = JsonConvert.DeserializeObject<dynamic>(message);
-            Console.WriteLine("To: " + routeOb.To);
-            Guid guidOutput;
-
-            if (Guid.TryParse(routeOb.To.ToString(), out guidOutput))
+            Console.WriteLine("Broadcast");
+            foreach (var sock in _manager.GetAllSockets())
             {
-                Console.WriteLine("Targeted");
-                var sock = _manager.GetAllSockets().FirstOrDefault(s => s.Key == routeOb.To.ToString());
-                if (sock.Value != null)
-                {
-                    if (sock.Value.State == WebSocketState.Open)
-                        await sock.Value.SendAsync(Encoding.UTF8.GetBytes(routeOb.Message.ToString()), WebSocketMessageType.Text, true, CancellationToken.None);
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Recipient");
-                }
+                if (sock.Value.State == WebSocketState.Open)
+                    await sock.Value.SendAsync(Encoding.UTF8.GetBytes(routeOb.Message.ToString()), WebSocketMessageType.Text, true, CancellationToken.None);
             }
-            else
-            {
-                Console.WriteLine("Broadcast");
-                foreach (var sock in _manager.GetAllSockets())
-                {
-                    if (sock.Value.State == WebSocketState.Open)
-                        await sock.Value.SendAsync(Encoding.UTF8.GetBytes(routeOb.Message.ToString()), WebSocketMessageType.Text, true, CancellationToken.None);
-                }
-            }
-
-
         }
+    }
 
-       
+    private static async Task SendConnID(WebSocket socket, string connID)
+    {
+        var buffer = Encoding.UTF8.GetBytes("ConnID: " + connID);
+        await socket.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
+    }
 
-        private async Task SendConnID(WebSocket socket, string connID)
+    private static async Task Receive(WebSocket socket, Action<WebSocketReceiveResult, byte[]> handleMessage)
+    {
+        var buffer = new byte[1024 * 4];
+
+        while (socket.State == WebSocketState.Open)
         {
-            var buffer = Encoding.UTF8.GetBytes("ConnID: " + connID);
-            await socket.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
-        }
+            var result = await socket.ReceiveAsync(buffer: new ArraySegment<byte>(buffer),
+                                                   cancellationToken: CancellationToken.None);
 
-        private async Task Receive(WebSocket socket, Action<WebSocketReceiveResult, byte[]> handleMessage)
-        {
-            var buffer = new byte[1024 * 4];
-
-            while (socket.State == WebSocketState.Open)
-            {
-                var result = await socket.ReceiveAsync(buffer: new ArraySegment<byte>(buffer),
-                                                       cancellationToken: CancellationToken.None);
-
-                handleMessage(result, buffer);
-            }
+            handleMessage(result, buffer);
         }
     }
 }
