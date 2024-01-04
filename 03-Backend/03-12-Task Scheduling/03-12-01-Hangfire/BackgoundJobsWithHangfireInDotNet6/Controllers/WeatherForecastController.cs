@@ -22,12 +22,12 @@ namespace BackgoundJobsWithHangfireInDotNet6.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            //BackgroundJob.Enqueue(() => SendMessage("elhelaly@outlook.com"));
+            //BackgroundJob.Enqueue(() => SendMessage("radi@outlook.com"));
 
             //Console.WriteLine(DateTime.Now);
-            //BackgroundJob.Schedule(() => SendMessage("elhelaly@outlook.com"), TimeSpan.FromMinutes(1));
+            //BackgroundJob.Schedule(() => SendMessage("radi@outlook.com"), TimeSpan.FromMinutes(1));
 
-            RecurringJob.AddOrUpdate(() => SendMessage("elhelaly@outlook.com"), Cron.Minutely);
+            RecurringJob.AddOrUpdate(() => SendMessage("radi@outlook.com"), Cron.Minutely);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
