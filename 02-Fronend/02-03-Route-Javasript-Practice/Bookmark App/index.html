@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bookmark</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h3>Bookmarker</h3>
+		</div>
+	</header>
+	<div class="container">
+		<div class="well">
+			<div class="column">
+				<h2>Bookmark your favorite sites </h2>
+				<p>Site Name</p>
+				<input id="siteName" placeholder="Bookmark Name" type="text" />
+				<p class="alert alert-error m-auto" id="nameError"></p>
+				<p>Site URL</p>
+				<input id="siteUrl" placeholder="website URL" type="text" />
+				<p class="alert alert-error m-auto" id="urlError"></p>
+				<div class="m-auto">
+						<button class="btn btn-primary" onclick="submit()">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="bookmarkList" class="column">
+			
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<p>&copy; 2024 Bookmarker Inc.</p>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>

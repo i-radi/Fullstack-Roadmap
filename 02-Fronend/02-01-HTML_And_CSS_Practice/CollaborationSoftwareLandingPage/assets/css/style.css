@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+
+body {
+  font-family: "Exo+2", sans-serif;
+}
+
+.text-primary {
+  color: #5022E2;
+}
+
+.btn-collab {
+  color: #FFF;
+  font-weight: bold;
+  background-image: -o-linear-gradient(40deg, #fe9a52, #ff5748);
+  background-image: linear-gradient(50deg, #fe9a52, #ff5748);
+}
+
+.text-gradient {
+  background: -o-linear-gradient(40deg, #fe9a52, #ff5748);
+  background: linear-gradient(50deg, #fe9a52, #ff5748);
+  font-weight: 700;
+  color: #FE9A52;
+}
+
+.bg-soft-danger {
+  background-color: #ffecea;
+}
+
+.rounded-3 {
+  border-radius: 1.25rem;
+}
+
+.shadow-collab {
+  box-shadow: 0 1rem 4rem rgb(254 154 82 / 25%);
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
