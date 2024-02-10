@@ -1,0 +1,8 @@
+ - Angular requires Node.js 
+ - To check node ver: 
+	node -v
+
+ - npm install -g @angular/cli
+
+ - To check Angular ver: 
+	ng v
