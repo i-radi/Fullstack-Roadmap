@@ -1,0 +1,141 @@
+01-Software Engineering
+01-01-Object Oriented Software
+01-02-Code Complete 2nd
+01-03-Clean Code
+01-04-HeadFirst-OOAD
+01-05-Algorithms/Algorithms
+01-06-Data Structures/Data Structures
+01-07-Software Architectures
+01-08-Design Patterns
+
+02-Frontend
+02-01-HTML_And_CSS_Practice
+02-02-ITI-Javasript-Practice
+02-03-Route-Javasript-Practice
+02-04-ITI-Angular
+
+03-Backend
+03-01-Databases
+03-01-01-Transact-SQL-Scripts
+03-01-02-Database-T-SQL-Practice
+03-01-03-Advanced Topics
+03-02-C# Syntax and OOP
+03-02-01-Common Methods
+03-02-02-OOP
+03-03-Desktop (Forms-WPF)
+03-03-01-Visual C#
+03-03-02-Encryption Application
+03-03-03-Snake and Ladder
+03-03-04-CoursesCenter System
+03-04-ORMs
+03-04-01-ORMs
+03-04-02-Entity-Framework
+03-04-03-EFCore
+03-04-04-FactoryDB
+03-04-05-Linq.If
+03-05-ASP.NET Core Basics
+03-05-01-Commander Identity-JWT
+03-05-02-Globalization and Localization
+03-05-03-Json Based Localization
+03-05-04-API Versioning
+03-05-05-JWT Refresh Token
+03-05-06-ReadFromExcel
+03-06-DesignPatterns and Advanced Topics
+03-06-01-Design Patterns
+03-06-02-Functional Programming
+03-06-03-Repository Pattern With UOW
+03-06-04-Send Emails
+03-06-05-Send SMS
+03-06-06-WhatsApp Integration
+03-06-07-MultiTenancy
+03-06-08-DocumentAPI
+03-07-Advanced Databases
+03-07-01-MongoDB
+03-07-02-MariaDb SQL
+03-07-03-CouchDB
+03-07-04-LiteDB
+03-07-05-RavenDB
+03-07-06-ELK Stack
+03-07-07-Cassandra
+03-07-08-Oracle
+03-08-Caching
+03-08-01-InMemoryCaching
+03-08-02-Redis
+03-08-03-EFSecondLevelCache
+03-09-Log Frameworks
+03-09-01-Serilog
+03-09-02-Seq
+03-09-03-Nlog&SwaggerDocumentation/EPIRoboticFuelLogger
+03-09-04-WindowsLogger
+03-10-API Clients and Communication
+03-10-01-Rest
+03-10-02-GraphQL
+03-10-03-gRPC
+03-11-Real Time Communication
+03-11-01-WebSocket
+03-11-02-SignalR
+03-11-03-FCM
+03-12-Task Scheduling
+03-12-01-Hangfire
+03-13-Unit Testing
+03-13-01-Robust Unit Tests
+03-13-02-TDD
+03-14-Good To Know Libraries
+03-14-01-AutoMapper
+03-14-02-Benchmarker
+03-14-03-IdentityServer
+03-15-Software Architectures
+03-15-01-Clean Architecture
+03-15-02-Modular Monolith
+03-15-03-WorkflowEngineTemplate
+03-16-Microservices
+03-16-01-RabbitMQ
+03-16-02-AWS Services
+03-16-03-APIGatewayUsingOcelot
+03-17-DDD
+Interview Questions
+
+04-Testing
+04-01-ISTQB
+04-02-Manual Testing
+04-03-Automation Testing
+
+05-DevOps
+05-01-Linux
+05-02-Git
+05-03-Docker
+05-04-Jenkins
+05-05-K8s
+05-06-aws
+05-07-IaC
+05-08-Monitoring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
